@@ -1,0 +1,17 @@
+{
+  "name": "angelozzi_c_chatapplication",
+  "version": "1.0.0",
+  "description": "chatapp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "camillo angelozzi",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
