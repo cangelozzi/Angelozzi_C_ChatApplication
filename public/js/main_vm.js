@@ -19,7 +19,26 @@ const vm = new Vue({
     nickname: '',
     message: '',
     messages: [],
-    connections: ''
+    connections: '',
+    typing: false,
+    users: [],
+    info: []
+  },
+
+  watch: {
+    message(value) {
+      value ? socket.emit('typing', this.nickname) : socket.emit('stoptyping');
+    }
+  },
+
+  created() {
+    socket.on('typing', (data) => {
+      console.log(data);
+      this.typing = data || 'Anonymous';
+    });
+    socket.on('stoptyping', () => {
+      this.typing = false;
+    });
   },
 
   methods: {
@@ -31,7 +50,11 @@ const vm = new Vue({
       // reset message field
       this.message = '';
       
-    }
+    },
+    isTyping() {
+      socket.emit('typing', this.nickname);
+    },
+
   },
 
   components: {
