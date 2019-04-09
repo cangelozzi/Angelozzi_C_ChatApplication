@@ -37,12 +37,17 @@ io.on('connection', function (socket) {
   // sending back msg to connecting tool
   socket.emit('connected', {sID: `${socket.id}`, message: 'new connection', connections: connections.length});
 
-  // listen for incoming message form anyone connected to the app
+  // listen for incoming message form anyone connected and send message to everyone connected to the app
   socket.on('chat message', function(msg) {
     console.log('message', msg, 'socket', socket.id);
-
-    // send message to everyone connected to the app
     io.emit('chat message', { id: `${socket.id}`, message: msg });
+  });
+
+  socket.on('typing', (data) => {
+    io.emit('typing', data);
+  });
+  socket.on('stoptyping', () => {
+    io.emit('stoptyping');
   });
 
   socket.on('disconnect', function(data){

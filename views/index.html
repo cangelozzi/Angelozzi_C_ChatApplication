@@ -18,9 +18,10 @@
     
     <section class="form-container">
       <i id='toggle' class="fas fa-adjust"></i> <p id="theme">change theme</p>
-      <h1 id="chatwelcome">Hello There! Let'chat!</h1>
-
-      <img src="./images/pic_intro.svg" alt="intro" id="picintro">
+      <header>
+        <h1 id="chatwelcome">Hello There! Let'chat!</h1>
+        <img src="./images/pic_intro.svg" alt="intro" id="picintro">
+      </header>
  
       <label for="nickname">Your (cool) Nickname</label>
       <input v-model='nickname' type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
@@ -32,6 +33,12 @@
       </form>
 
       <h1 id="connectionson">People connected to the chat: {{connections}}</h1>
+      <p v-if="typing" class="text-typing">{{typing}} is typing...</p>
+      <div id="wave" v-if="typing">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
 
     </section>
 
