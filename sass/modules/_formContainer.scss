@@ -78,7 +78,7 @@ form {
 }
 
 #chatwelcome {
-  margin: 20px 0 80px 0;
+  margin: 20px 0 10px 0;
   font-size: 41px;
 }
 
@@ -120,6 +120,24 @@ input[type=submit] {
   }
 }
 
-#toggle { font-size: 30px; display: inline; cursor: pointer;}
+#toggle {
+  font-size: 30px;
+  display: inline;
+  cursor: pointer;
+}
 
-#theme { display: inline; font-size: 12px; text-transform: uppercase;}
+#theme {
+  display: inline;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+#picintro {
+  width: 30%;
+  margin: 20px auto;
+  display: block;
+}
+
+#connectionson {
+  color: $yellow;
+}

@@ -4,6 +4,7 @@ export default {
   template: `
   
     <p class="new-message" :class="{ 'my-message' : matchedID }">
+    <span>{{ new Date().toLocaleString() }}</span>
       <span>{{msg.message.name}} says:</span>
       {{msg.message.content}}
     </p>
