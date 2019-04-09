@@ -7,9 +7,9 @@ engine client.
 
 ## Notes
 
-`node app` to enjoy the chat and inmprove it.
+`node app` to enjoy the chat and improve it.
 
-Or visit it live, just for fun: https://angelozzi-c-chat-application.herokuapp.com/
+...Or visit it live, just for fun: https://angelozzi-c-chat-application.herokuapp.com/
 
 ## Tools used during development phase:
 
