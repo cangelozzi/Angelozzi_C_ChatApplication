@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700,800,900&subset=latin-ext');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Quicksand';
+}
+
+main {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+[data-palette="0"] {
+  background: -webkit-linear-gradient($bckgrdone, $bckgrdtwo);
+  background: linear-gradient($bckgrdone, $bckgrdtwo);
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  color: $white
+}
+
+[data-palette="1"] {
+  background: -webkit-linear-gradient($black, $aubergine);
+  background: linear-gradient($black, $aubergine);
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  color: #fff;
+}

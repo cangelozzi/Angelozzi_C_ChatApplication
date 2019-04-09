@@ -1,0 +1,125 @@
+.form-container,
+.messages {
+  padding: 20px;
+}
+
+.form-container {
+  flex: 1;
+  // background: -webkit-linear-gradient($bckgrdone, $bckgrdtwo);
+  // background: linear-gradient($bckgrdone, $bckgrdtwo);
+  // opacity: 0.85;
+  // filter: alpha(opacity=85);
+  color: $white;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.messages {
+  flex: 2;
+  // background: -webkit-linear-gradient($bckgrdone, $bckgrdtwo);
+  // background: linear-gradient($bckgrdone, $bckgrdtwo);
+  // opacity: 0.85;
+  // filter: alpha(opacity=85);
+  color: $black;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  outline: none;
+}
+
+textarea {
+  height: 135px;
+}
+
+
+
+form {
+  padding: 3px;
+  margin: 12px auto;
+
+  // input[type=submit] {
+  //   width: auto;
+  //   padding: 10px;
+  //   background-color: $aubergine;
+  //   margin-top: 1rem;
+  //   color: $white;
+  //   cursor: pointer;
+  //   text-transform: uppercase;
+  //   border-radius: 4%;
+
+  //   &:hover {
+  //     background-color: $yellow;
+  //     color: $black;
+  //   }
+  // }
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+
+  li {
+    padding: 5px 10px;
+  }
+
+  li:nth-child(odd) {
+    background: #eee;
+  }
+}
+
+#chatwelcome {
+  margin: 20px 0 80px 0;
+  font-size: 41px;
+}
+
+
+input[type=submit] {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 8px;
+  background: $green;
+  border: 2px solid $white;
+  color: $white;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  margin-top: 40px;
+  font-size: 19px;
+
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: white;
+    background: -webkit-linear-gradient($bckgrdone, $bckgrdtwo);
+    background: linear-gradient($bckgrdone, $bckgrdtwo);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+
+  }
+
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px;
+  }
+
+  &:after {
+    content: "SUBMIT";
+  }
+}
+
+#toggle { font-size: 30px; display: inline; cursor: pointer;}
+
+#theme { display: inline; font-size: 12px; text-transform: uppercase;}

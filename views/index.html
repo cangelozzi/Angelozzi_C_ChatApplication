@@ -3,21 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Socket IO Chat with Node!</title>
+  <title>Camillo Cool Chat</title>
   <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+      integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous">
+      </script>
   <script src="https://unpkg.com/vue"></script>
 </head>
 
-<body>
+<body data-palette='0'>
   <main id="app">
+
+    
     <section class="form-container">
-      <label for="nickname">Your Nickname (optional)</label>
+      <i id='toggle' class="fas fa-adjust"></i> <p id="theme">change theme</p>
+      <h1 id="chatwelcome">Hello There! Let'chat!</h1>
+ 
+      <label for="nickname">Your (cool) Nickname</label>
       <input v-model='nickname' type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 
       <form>
-        <label for="message">Something to say?</label>
+        <label for="message">Share your thoughts:</label>
         <textarea v-model='message' class="message" type="text" autocomplete="off" id="textarea"></textarea>
-        <input type="submit" @click.prevent='dispatchMessage'>
+        <input id='button' type="submit" @click.prevent='dispatchMessage'>
       </form>
     </section>
 
