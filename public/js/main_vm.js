@@ -1,11 +1,11 @@
 import ChatMessage from "./modules/ChatMessage.js";
-
 // run socket on CLIENT 
 const socket = io();
 
-function logConnect({ sID, message }) { 
-  console.log(sID, message);
+function logConnect({ sID, message, connections }) { 
+  console.log(sID, message, connections);
  vm.socketID = sID;
+ vm.connections = connections;
 }
 
 function appendMessage(message) {
@@ -18,7 +18,8 @@ const vm = new Vue({
     socketID: '',
     nickname: '',
     message: '',
-    messages: []
+    messages: [],
+    connections: ''
   },
 
   methods: {

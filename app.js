@@ -24,13 +24,18 @@ const server = app.listen(port, ()=> {
 
 //! socket.io chat app stuff to follow note. socket is client
 
+let connections = [];
+
 io.attach(server);
 
 io.on('connection', function (socket) {
   console.log('a user has connected');
 
+  connections.push(socket);
+  console.log('Connected: %s sockets connected', connections.length);
+
   // sending back msg to connecting tool
-  socket.emit('connected', {sID: `${socket.id}`, message: 'new connection'});
+  socket.emit('connected', {sID: `${socket.id}`, message: 'new connection', connections: connections.length});
 
   // listen for incoming message form anyone connected to the app
   socket.on('chat message', function(msg) {
@@ -40,7 +45,9 @@ io.on('connection', function (socket) {
     io.emit('chat message', { id: `${socket.id}`, message: msg });
   });
 
-  socket.on('disconnect', function(){
+  socket.on('disconnect', function(data){
     console.log('a user has disconnected');
+    connections.splice(connections.indexOf(socket), 1);
+    console.log('Connected: %s sockets connected', connections.length);
   });
 });
