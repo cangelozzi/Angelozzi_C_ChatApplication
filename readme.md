@@ -12,6 +12,7 @@ engine client.
 ...Or visit it live, just for fun: https://angelozzi-c-chat-application.herokuapp.com/
 
 ### Try it in cool 'Dark Mode'
+###### works in Chrome and Safari
 ![image](public/images/dark.png)
 
 ## Tools used during development phase:
